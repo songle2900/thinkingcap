@@ -229,3 +229,10 @@ ul {
   width: 56%; 
   transition: all 0.3s;
 }
+
+@media screen and (max-width: 600px) {
+  .search-area {
+    width: 80%;
+    margin-top: 45px;
+  }
+}
