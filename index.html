@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eric Song</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+
+<body onload="getData();">
+    <header class="header">
+        <!-- <h2 class="title">Eric (Youngmin) Song</h2> -->
+        <div class="eric-button">
+            <span>Hover - Eric Song</span>
+            <a href="https://github.com/songle2900" target="_blank" ><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/eric-song-9207b3157/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="search-area">
+            <select id="search-type">
+                <option value="name">Name</option>
+                <option value="body">body</option>
+                <option value="email">email</option>
+            </select>
+            <input type="text" id="keyword" />
+            <button type="button" onclick="search();">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <ul class="list">
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
