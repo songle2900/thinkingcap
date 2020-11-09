@@ -189,3 +189,29 @@ ul {
   transition-delay: .4s;
 }
 
+#search-type {
+  font-family: Cursive;
+  border-radius:4px;
+  border:1px solid #AAAAAA;
+}
+
+#keyword {
+  font-family: Cursive;
+  border-radius:4px;
+  border:1px solid #AAAAAA;
+}
+
+.search {
+  width: 10;
+  padding: 10px;
+  color: white;
+  background: #2196F3;
+  font-size: 15px;
+  border-radius:4px;
+  border: none;
+  cursor: pointer;
+}
+
+.search:hover {
+  background: #0b7dda;
+}
