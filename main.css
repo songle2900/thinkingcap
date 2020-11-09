@@ -1,0 +1,191 @@
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.forum-container {
+  max-height: 53px;
+  transition: max-height 0.2s linear;
+}
+
+.forum-container.out-of-search-criteria {
+  display: none;
+}
+
+.btn-accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-accordion::after {
+  content: "+";
+  font-size: 20px;
+}
+
+.btn-accordion:hover {
+  background-color: #ccc;
+}
+
+.item {
+  padding: 18px;
+  overflow: hidden;
+  display: none;
+  min-height: 80px;
+}
+
+.item+.item {
+  margin-top: 10px;
+}
+
+.forum-container.active {
+  max-height: 700px;
+}
+
+.forum-container.active>.item {
+  display: block;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.forum-container.active>.btn-accordion {
+  background-color: #ccc;
+}
+
+.forum-container.active>.btn-accordion::after {
+  font-size: 14px;
+  font-weight: 600;
+  content: "-";
+}
+
+.forum-container+.forum-container.active,
+.forum-container.active+.forum-container.active {
+  margin: 20px 0;
+}
+
+.mini-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #ddd;
+}
+
+.name {
+  font-weight: 600;
+  color: rgb(53, 170, 209);
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 0 10%;
+  background-color: white;
+  border-bottom: 2px solid #dddddd;
+}
+
+.title {
+  display: inline;
+}
+
+.search-area {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 26px;
+}
+
+/* Title button styling */
+
+.eric-button {
+  width: 100px;
+  height: 60px;
+  background: #dfe6e9;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  margin: 0.5em 0 0.5em 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+.eric-button:hover{
+  transform: scale(1.1);
+}
+
+.eric-button span{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #536a70;
+  color: #f1f1f1;
+  text-align: center;
+  line-height: 60px;
+  z-index: 999;
+  transition: .6s linear;
+  border-radius: 40px;
+}
+
+.eric-button:hover span{
+  transform: translateX(-100%);
+  transition-delay: .3s;
+}
+
+.eric-button a {
+  flex: 1;
+  font-size: 26px;
+  margin-right: 20px;
+  color: #2d3436;
+  text-align: center;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: .3s linear;
+}
+
+.eric-button:hover a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.eric-button a:nth-of-type(1){
+  transition-delay: 1s;
+}
+
+.eric-button a:nth-of-type(2){
+  transition-delay: .8s;
+}
+
+.eric-button a:nth-of-type(3){
+  transition-delay: .6s;
+}
+
+.eric-button a:nth-of-type(4){
+  transition-delay: .4s;
+}
+
